@@ -1,0 +1,590 @@
+/*
+Copyright (c) 2018-2019 Qualcomm Technologies, Inc.
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the 
+disclaimer below) provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer 
+      in the documentation and/or other materials provided with the distribution.
+    * Neither the name of Qualcomm Technologies, Inc. nor the names of its contributors may be used to endorse or promote 
+      products derived from this software without specific prior written permission.
+    * The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use 
+      this software in a product, an acknowledgment is required by displaying the trademark/log as per the details provided 
+      here: https://www.qualcomm.com/documents/dirbs-logo-and-brand-guidelines
+    * Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+    * This notice may not be removed or altered from any source distribution.
+NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED 
+BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO 
+EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+button {
+  cursor: pointer;
+}
+
+.btn-transparent {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn {
+  [class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle;
+  }
+}
+
+.btn-facebook,
+.btn-twitter,
+.btn-linkedin,
+.btn-flickr,
+.btn-tumblr,
+.btn-xing,
+.btn-github,
+.btn-html5,
+.btn-openid,
+.btn-stack-overflow,
+.btn-youtube,
+.btn-css3,
+.btn-dribbble,
+.btn-google-plus,
+.btn-instagram,
+.btn-pinterest,
+.btn-vk,
+.btn-yahoo,
+.btn-behance,
+.btn-dropbox,
+.btn-reddit,
+.btn-spotify,
+.btn-vine,
+.btn-foursquare,
+.btn-vimeo {
+  position: relative;
+  overflow: hidden;
+  color: #fff !important;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.icon {
+
+    span {
+      display: none;
+    }
+  }
+
+  &.text {
+    &::before {
+      display: none;
+    }
+
+    span {
+      margin-left: 0 !important;
+    }
+  }
+  @include button-social-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $line-height-base, $btn-border-radius);
+
+  &.btn-lg {
+    @include button-social-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+  }
+
+  &.btn-sm {
+    @include button-social-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+  }
+
+}
+
+.btn-facebook {
+  $color: $facebook;
+
+  background: $color;
+  &::before {
+    content: "\f09a";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-twitter {
+  $color: $twitter;
+
+  background: $color;
+  &::before {
+    content: "\f099";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-linkedin {
+  $color: $linkedin;
+
+  background: $color;
+  &::before {
+    content: "\f0e1";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-flickr {
+  $color: $flickr;
+
+  background: $color;
+  &::before {
+    content: "\f16e";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-tumblr {
+  $color: $tumblr;
+
+  background: $color;
+  &::before {
+    content: "\f173";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-xing {
+  $color: $xing;
+
+  background: $color;
+  &::before {
+    content: "\f168";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-github {
+  $color: $github;
+
+  background: $color;
+  &::before {
+    content: "\f09b";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-html5 {
+  $color: $html5;
+
+  background: $color;
+  &::before {
+    content: "\f13b";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-openid {
+  $color: $openid;
+
+  background: $color;
+  &::before {
+    content: "\f19b";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-stack-overflow {
+  $color: $stack-overflow;
+
+  background: $color;
+  &::before {
+    content: "\f16c";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-css3 {
+  $color: $css3;
+
+  background: $color;
+  &::before {
+    content: "\f13c";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-youtube {
+  $color: $youtube;
+
+  background: $color;
+  &::before {
+    content: "\f167";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-dribbble {
+  $color: $dribbble;
+
+  background: $color;
+  &::before {
+    content: "\f17d";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-google-plus {
+  $color: $google-plus;
+
+  background: $color;
+  &::before {
+    content: "\f0d5";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-instagram {
+  $color: $instagram;
+
+  background: $color;
+  &::before {
+    content: "\f16d";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-pinterest {
+  $color: $pinterest;
+
+  background: $color;
+  &::before {
+    content: "\f0d2";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-vk {
+  $color: $vk;
+
+  background: $color;
+  &::before {
+    content: "\f189";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-yahoo {
+  $color: $yahoo;
+
+  background: $color;
+  &::before {
+    content: "\f19e";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-behance {
+  $color: $behance;
+
+  background: $color;
+  &::before {
+    content: "\f1b4";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-dropbox {
+  $color: $dropbox;
+
+  background: $color;
+  &::before {
+    content: "\f16b";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-reddit {
+  $color: $reddit;
+
+  background: $color;
+  &::before {
+    content: "\f1a1";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-spotify {
+  $color: $spotify;
+
+  background: $color;
+  &::before {
+    content: "\f1bc";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-vine {
+  $color: $vine;
+
+  background: $color;
+  &::before {
+    content: "\f1ca";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-foursquare {
+  $color: $foursquare;
+
+  background: $color;
+  &::before {
+    content: "\f180";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn-vimeo {
+  $color: $vimeo;
+
+  background: $color;
+  &::before {
+    content: "\f194";
+    background: darken($color, 5%);
+
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+
+    &::before {
+      background: darken($color, 10%);
+    }
+  }
+}

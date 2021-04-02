@@ -1,0 +1,277 @@
+/*
+Copyright (c) 2018-2019 Qualcomm Technologies, Inc.
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the 
+disclaimer below) provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer 
+      in the documentation and/or other materials provided with the distribution.
+    * Neither the name of Qualcomm Technologies, Inc. nor the names of its contributors may be used to endorse or promote 
+      products derived from this software without specific prior written permission.
+    * The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use 
+      this software in a product, an acknowledgment is required by displaying the trademark/log as per the details provided 
+      here: https://www.qualcomm.com/documents/dirbs-logo-and-brand-guidelines
+    * Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+    * This notice may not be removed or altered from any source distribution.
+NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED 
+BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO 
+EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+// .social-box
+.social-box {
+  min-height: 160px;
+  margin-bottom: 2 * $card-spacer-y;
+  text-align: center;
+  background: #fff;
+  border: $card-border-width solid $card-border-color;
+  @include border-radius($card-border-radius);
+
+  i {
+    display: block;
+    margin: -1px -1px 0;
+    font-size: 40px;
+    line-height: 90px;
+    background: $gray-200;
+
+    @include border-radius($card-border-radius $card-border-radius 0 0);
+  }
+
+  .chart-wrapper {
+    height: 90px;
+    margin: -90px 0 0;
+
+    canvas {
+      width: 100% !important;
+      height: 90px !important;
+    }
+  }
+
+  ul {
+    padding: 10px 0;
+    list-style: none;
+
+
+    li {
+      display: block;
+      float: left;
+      width: 50%;
+
+      &:first-child {
+        border-right: 1px solid $border-color;
+      }
+
+      strong {
+        display: block;
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: 500;
+        color: $border-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.facebook {
+    i {
+      color: #fff;
+      background: $facebook;
+    }
+  }
+
+  &.twitter {
+    i {
+      color: #fff;
+      background: $twitter;
+    }
+  }
+
+  &.linkedin {
+    i {
+      color: #fff;
+      background: $linkedin;
+    }
+  }
+
+  &.google-plus {
+    i {
+      color: #fff;
+      background: $google-plus;
+    }
+  }
+}
+
+.horizontal-bars {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+
+    .title {
+      width: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: $text-muted;
+      vertical-align: middle;
+    }
+
+    .bars {
+      position: absolute;
+      top: 15px;
+      width: 100%;
+      padding-left: 100px;
+
+      .progress:first-child {
+        margin-bottom: 2px;
+      }
+    }
+
+    &.legend {
+      text-align: center;
+
+      .badge {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+      }
+    }
+
+    &.divider {
+      height: 40px;
+
+      i {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  &.type-2 {
+
+    li {
+      overflow: hidden;
+
+      i {
+        display: inline-block;
+        margin-right: $spacer;
+        margin-left: 5px;
+        font-size: 18px;
+        line-height: 40px;
+      }
+
+      .title {
+        display: inline-block;
+        width: auto;
+        margin-top: -9px;
+        font-size: $font-size-base;
+        font-weight: normal;
+        line-height: 40px;
+        color: $body-color;
+      }
+
+      .value {
+        float: right;
+        font-weight: 600;
+      }
+
+      .bars {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.icons-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    height: 40px;
+    vertical-align: middle;
+
+    i {
+      display: block;
+      float: left;
+      width: 35px !important;
+      height: 35px !important;
+      margin: 2px;
+      line-height: 35px !important;
+      text-align: center;
+    }
+
+    .desc {
+      height: 40px;
+      margin-left: 50px;
+      border-bottom: 1px solid $border-color;
+
+      .title {
+        padding: 2px 0 0;
+        margin: 0;
+      }
+      small {
+        display: block;
+        margin-top: -4px;
+        color: $text-muted;
+      }
+    }
+
+    .value {
+      position: absolute;
+      top: 2px;
+      right: 45px;
+      text-align: right;
+
+      strong {
+        display: block;
+        margin-top: -3px;
+      }
+    }
+
+    .actions {
+      position: absolute;
+      top: -4px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+
+      i {
+        float: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        line-height: normal;
+      }
+    }
+
+    &.divider {
+      height: 40px;
+
+      i {
+        width: auto;
+        height: auto;
+        margin: 2px 0 0;
+        font-size: 18px;
+      }
+    }
+  }
+}
