@@ -17,9 +17,9 @@ NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS 
 
 
 ## Documentation
-[Notification-Subsystem-API-Installation-Guide-1.0.0](https://github.com/dirbs/Documentation/blob/master/Notification-Subsystem/Notification-Subsystem-API-Installation-Guide-1.0.0.pdf)<br />
-[Notification-Subsystem-SPA-Installation-Guide-1.0.0.pdf](https://github.com/dirbs/Documentation/blob/master/Notification-Subsystem/Notification-Subsystem-SPA-Installation-Guide-1.0.0.pdf) <br />
-[Notification-Subsystem-User-Guide-1.0.0.pdf](https://github.com/dirbs/Documentation/blob/master/Notification-Subsystem/Notification-Subsystem-User-Guide-1.0.0.pdf)<br />
+[Notification-Subsystem-API-Installation-Guide-1.0.0](https://github.com/dirbs/Documentation/blob/master/Notification-Subsystem/NS-Installation-Guide-API-1.0.0.pdf)<br />
+[Notification-Subsystem-SPA-Installation-Guide-1.0.0.pdf](https://github.com/dirbs/Documentation/blob/master/Notification-Subsystem/NS-Installation-Guide-SPA-1.0.0.pdf) <br />
+[Notification-Subsystem-User-Guide-1.0.0.pdf](https://github.com/dirbs/Documentation/blob/master/Notification-Subsystem/NS-User-Guide-1.0.0.pdf)<br />
 
 ## Backtend Application Repo
 https://github.com/dirbs/Notification-Subsystem
